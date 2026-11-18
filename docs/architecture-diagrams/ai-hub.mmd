@@ -1,0 +1,8 @@
+flowchart LR
+  SN[ServiceNow / MCP] --> ING[Metadata ingestion]
+  ING --> KG[(Neo4j)]
+  OP[Operator] --> ORCH[Orchestration]
+  ORCH --> AG[Seven agents]
+  AG --> BEDROCK[AWS Bedrock]
+  AG --> KG
+  AG --> HITL[Human approval]
